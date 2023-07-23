@@ -2,25 +2,18 @@ print("Enter a word")
 a = []
 r = []
 word = input()
-RevW = word[::-1]
 l = len(word)
-#print(l)
 
-a = list(word)
+for character in word:
+    a.append(character.lower())
+    r.append(character.lower())
+
+r.reverse()
+
 #print(a)
-
-r = list(RevW)
 #print(r)
 
-for i in range(l):
-    if a[i] == r[i]:
-        palindrome = True
-        continue
-    else:
-        palindrome = False
-        break
-#print(palindrome)
-if palindrome == True:
+if a == r:
     print("Well done!", word, "is a palindrome.")
 else:
-    print("Sorry", word, "isn't a palindrome.")
+    print("Sorry,", word, "isn't a palindrome.")
