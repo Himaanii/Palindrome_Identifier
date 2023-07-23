@@ -5,6 +5,9 @@ word = input()
 l = len(word)
 
 for character in word:
+  if character == " ":
+    continue
+  else:
     a.append(character.lower())
     r.append(character.lower())
 
