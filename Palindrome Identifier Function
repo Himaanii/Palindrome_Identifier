@@ -1,0 +1,17 @@
+def is_palindrome(word):
+  a = []
+  r = []
+
+  for character in word:
+    if character == " ":
+      continue
+    else:
+      a.append(character.lower())
+      r.append(character.lower())
+
+  r.reverse()
+
+  if a == r:
+     return True
+  else:
+     return False
