@@ -1,0 +1,26 @@
+print("Enter a word")
+a = []
+r = []
+word = input()
+RevW = word[::-1]
+l = len(word)
+#print(l)
+
+a = list(word)
+#print(a)
+
+r = list(RevW)
+#print(r)
+
+for i in range(l):
+    if a[i] == r[i]:
+        palindrome = True
+        continue
+    else:
+        palindrome = False
+        break
+#print(palindrome)
+if palindrome == True:
+    print("Well done!", word, "is a palindrome.")
+else:
+    print("Sorry", word, "isn't a palindrome.")
