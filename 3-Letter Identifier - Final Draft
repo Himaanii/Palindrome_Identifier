@@ -1,12 +1,18 @@
-print("Enter a 3 letter word.")
 a = []
 r = []
+length = 0
 
-word = input() 
+while length != 3:
+  print("Enter a 3 letter word.")
+  word = input() 
+  length = len(word)
 
-for i in range(3):
+count = 3
+
+for i in range(count):
   a.append(word[i].upper())  
   r.append(word[i].upper())
+
 
 #print(a)
 #print(r)
@@ -17,4 +23,3 @@ if a==r:
   print(word, "is a palindrome.")
 else:
   print("Sorry", word, "is not a palindrome")
- 
