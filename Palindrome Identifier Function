@@ -1,14 +1,7 @@
 def palindrome_identifier(word):
     word = word.lower().strip()
-    length = len(word)
-    first_half = word[:(length//2)]
-
-    if length % 2 == 1:
-        second_half = word[:-((length+1)//2):-1]
-    else:
-        second_half = word[:-(length//2)-1:-1]
-
-    if first_half == second_half:
+    reversed = word[::-1]
+    if word == reversed:
         is_palindrome = True
     else:
         is_palindrome = False
